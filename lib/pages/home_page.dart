@@ -124,7 +124,11 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-                MainFeature(imagePath: send, title: "Send"),
+                InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, "/send");
+                  },
+                  child: MainFeature(imagePath: send, title: "Send")),
                 MainFeature(imagePath: request, title: "Request"),
                 MainFeature(imagePath: scan, title: "Scan"),
               ],

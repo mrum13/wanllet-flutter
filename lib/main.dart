@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wanllet/cubit/navbar_cubit.dart';
 import 'package:wanllet/pages/main_page.dart';
+import 'package:wanllet/pages/search_page.dart';
 
 void main() {
-  // SystemChrome.setSystemUIOverlayStyle(
-  //   SystemUiOverlayStyle(
-  //     statusBarBrightness: Brightness.light
-  //   )
-  // );
   runApp(const MainApp());
 }
 
@@ -21,7 +16,10 @@ class MainApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [BlocProvider(create: (context) => NavbarCubit())],
       child: MaterialApp(
-        routes: {"/": (context) => const MainPage()},
+        routes: {
+          "/": (context) => const MainPage(),
+          "/send": (context) => const SearchPage(),
+        },
         initialRoute: "/",
       ),
     );
