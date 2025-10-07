@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wanllet/cubit/navbar_cubit.dart';
 import 'package:wanllet/pages/main_page.dart';
 import 'package:wanllet/pages/search_page.dart';
+import 'package:wanllet/pages/send_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -18,7 +19,8 @@ class MainApp extends StatelessWidget {
       child: MaterialApp(
         routes: {
           "/": (context) => const MainPage(),
-          "/send": (context) => const SearchPage(),
+          "/search": (context) => const SearchPage(),
+          "/send": (context) => const SendPage(),
         },
         initialRoute: "/",
       ),

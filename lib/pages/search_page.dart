@@ -70,49 +70,52 @@ class SearchPage extends StatelessWidget {
                         return Row(
                           children: [
                             const SizedBox(width: 16,),
-                            Container(
-                              width: 300,
-                              padding: const EdgeInsets.all(16),
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12),
-                                image: DecorationImage(
-                                  image: AssetImage(cardBackground),
-                                  fit: BoxFit.cover
-                                ) 
-                              ),
-                              child: Row(
-                                children: [
-                                  Image.asset(
-                                    historyData[index]['image_path'].toString(), 
-                                    height: 50, 
-                                    width: 50,
-                                  ),
-                                  const SizedBox(width: 12,),
-                                  Expanded(
-                                    child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          historyData[index]['name'].toString(), 
-                                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: whiteColor),
-                                        ),
-                                        Text(
-                                          historyData[index]['number'].toString(), 
-                                          style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: textColor),
-                                        ),
-                                      ],
+                            InkWell(
+                              onTap: () => Navigator.pushNamed(context, '/send'),
+                              child: Container(
+                                width: 300,
+                                padding: const EdgeInsets.all(16),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(12),
+                                  image: DecorationImage(
+                                    image: AssetImage(cardBackground),
+                                    fit: BoxFit.cover
+                                  ) 
+                                ),
+                                child: Row(
+                                  children: [
+                                    Image.asset(
+                                      historyData[index]['image_path'].toString(), 
+                                      height: 50, 
+                                      width: 50,
                                     ),
-                                  ),
-                                  const SizedBox(width: 12,),
-                                  Container(
-                                    padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 5),
-                                    decoration: BoxDecoration(
-                                      color: primaryColor,
-                                      borderRadius: BorderRadius.circular(10)
+                                    const SizedBox(width: 12,),
+                                    Expanded(
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            historyData[index]['name'].toString(), 
+                                            style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: whiteColor),
+                                          ),
+                                          Text(
+                                            historyData[index]['number'].toString(), 
+                                            style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: textColor),
+                                          ),
+                                        ],
+                                      ),
                                     ),
-                                    child: Icon(Icons.arrow_forward_outlined, size: 24, color: whiteColor,),
-                                  )
-                                ],
+                                    const SizedBox(width: 12,),
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 5),
+                                      decoration: BoxDecoration(
+                                        color: primaryColor,
+                                        borderRadius: BorderRadius.circular(10)
+                                      ),
+                                      child: Icon(Icons.arrow_forward_outlined, size: 24, color: whiteColor,),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           ],

@@ -6,6 +6,7 @@ final String avatar4 = "assets/avatar4.png";
 final String avatar5 = "assets/avatar5.png";
 final String background = "assets/background.png";
 final String background2 = "assets/background2.png";
+final String background3 = "assets/background3.png";
 final String banner = "assets/banner.png";
 final String bca = "assets/bca.png";
 final String boundary = "assets/boundary.png";
