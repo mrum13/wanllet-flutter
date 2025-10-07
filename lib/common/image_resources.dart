@@ -23,3 +23,6 @@ final String request = "assets/request.png";
 final String scan = "assets/scan.png";
 final String searchBackground = "assets/search_background.png";
 final String cardBackground = "assets/card_background.png";
+
+///animation
+final String radar = "assets/radar.json";
